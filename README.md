@@ -1,51 +1,56 @@
-# ij-gitbranch-title
+# Git Branch in Window Title
 
-![Build](https://github.com/sanderPostma/ij-gitbranch-title/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
+[![Build](https://github.com/sanderPostma/ij-gitbranch-title/workflows/Build/badge.svg)](https://github.com/sanderPostma/ij-gitbranch-title/actions)
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties) and [pluginName](./gradle.properties), as well as the [id](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `MARKETPLACE_ID` in the above README badges. You can obtain it once the plugin is published to JetBrains Marketplace.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+## Description
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+This IntelliJ IDEA plugin adds the current Git branch name to your IDE window title bar. It displays the title in the format: `Project Name [Branch Name] - Current File`.
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
-
-To keep everything working, do not remove `<!-- ... -->` sections. 
+Designed especially for developers who use time tracking applications that capture window titles to associate work with specific tickets or tasks. If you follow a branch naming convention that includes ticket numbers (e.g., `feature/JIRA-123`), this plugin makes it easier for time tracking tools to automatically associate your work with the correct tickets.
 <!-- Plugin description end -->
+
+## Features
+
+- Automatically updates the window title with your current Git branch name
+- Shows the current file you're working on
+- Updates in real-time when switching branches or files
+- Lightweight with minimal performance impact
+
+## Use Cases
+
+- Automatic time tracking with tools that capture window titles
+- Easier context switching between multiple project windows
+- Quick visual reference of which branch you're currently working on
 
 ## Installation
 
-- Using the IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "ij-gitbranch-title"</kbd> >
+- **Using the IDE built-in plugin system:**
+
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Git Branch in Window Title"</kbd> >
   <kbd>Install</kbd>
-  
-- Using JetBrains Marketplace:
 
-  Go to [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID) and install it by clicking the <kbd>Install to ...</kbd> button in case your IDE is running.
-
-  You can also download the [latest release](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID/versions) from JetBrains Marketplace and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
-- Manually:
+- **Manual Installation:**
 
   Download the [latest release](https://github.com/sanderPostma/ij-gitbranch-title/releases/latest) and install it manually using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
+## Requirements
+
+- IntelliJ IDEA 2023.3 or newer (build 233+)
+- Git integration enabled in your project
+
+## Feedback and Contributions
+
+- Report issues on the [GitHub issue tracker](https://github.com/sanderPostma/ij-gitbranch-title/issues)
+- Pull requests are welcome!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-Plugin based on the [IntelliJ Platform Plugin Template][template].
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+Developed by [Sander Postma](https://github.com/sanderPostma)
+
+Build with JetBrains [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
